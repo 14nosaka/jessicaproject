@@ -82,6 +82,12 @@ public class player : MonoBehaviour
         {
             isJumping = false;
         }
+
+        if(collision.gameObject.tag == "death")
+        {
+            SavePoints.acesso.ShowGameOver();
+            Destroy(gameObject);
+        }
     }
 
     void OnCollisionExit2D(Collision2D collision)
