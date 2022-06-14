@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SavePoints : MonoBehaviour
 {
@@ -26,7 +27,10 @@ public class SavePoints : MonoBehaviour
         gameOver.SetActive(true);
     }
 
-    
+    public void RestartGame(string level)
+    {
+        SceneManager.LoadScene(level);
+    }
 
 
 }
